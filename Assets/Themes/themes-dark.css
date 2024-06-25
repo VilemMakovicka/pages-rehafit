@@ -1,0 +1,15 @@
+:root{
+    --colors-primary: rgb(58, 205, 255);
+    --colors-secondary: rgb(58, 172, 58);
+    --colors-background-primary: rgb(41, 41, 52);
+    --colors-font-positive: white;
+
+    --font-primary: MuseoSans;
+
+    --font-size-collapsible-header: 1em;
+    
+    --border-radius-primary: 1em;
+    --border-radius-secondary: 0.3em;
+    --transition-length: 0.2s;
+
+}
