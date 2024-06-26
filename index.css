@@ -54,25 +54,26 @@ button{
 
 .header-name-parent{
     display: flex;
+    flex-direction:column;
 }
 
 .header-content{
     margin: 0;
     padding: 0;
-
+    
     width: max-content;
     height: 4em;
-
+    
     align-items: center;
     align-content: center;
-
+    
     display: flex;
 }
 
 .header{
     margin: 0;
     padding: 0;
-
+    
     width: 100%;
     height: 4em;
 }
@@ -80,7 +81,7 @@ button{
 .header-image{
     width: 3.5em;
     height: 3.5em;
-
+    
     padding: 0;
     margin: 0 1em 0 1em;
 }
@@ -90,8 +91,11 @@ button{
     font-weight: 700;
     color: var(--colors-primary);
     font-family: var(--fonts-primary);
+}
 
-    margin: auto;
+.header-description{
+    margin-top: 0;
+    font-weight: 550;
 }
 
 .bordered{
@@ -151,6 +155,10 @@ button{
 
     /*transition: border-radius var(--transition-length) 0.25s ease-out;*/
     transition: all var(--transition-length);
+
+    display: flex;
+    align-items: center;
+    
 }
 
 .collapsible-header:hover{
@@ -193,6 +201,24 @@ ul{
 li{
     padding: 0;
     margin: 0;
+}
+
+.collapsible-header-content{
+    margin: auto;
+    display: flex;
+}
+
+.collapsible-header-text{
+    color: white;
+    align-self: center;
+}
+.collapsible-header-caret{
+    /*margin-top: 0.1em;*/
+
+    width: 2em; 
+    height: 2em; 
+
+    align-self: center;
 }
 
 .contacts-parent{
