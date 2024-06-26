@@ -11,18 +11,38 @@ function assignCollapsibles(){
         collapsiableButtons[i].addEventListener("click", function() 
         {
             var content = this.nextElementSibling;
+            let caret = collapsiableButtons[i].children[0].children[1];
+
             if (content.style.maxHeight)
             {
                 this.classList.remove("active");
                 content.style.maxHeight = null;
+                caret.src = 'Assets/Caret_down.png';
             } 
             else 
             {
                 this.classList.add("active");
                 content.style.maxHeight = content.scrollHeight + "px";
+                caret.src= 'Assets/Caret_up.png';
             }
         });
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var headers = document.querySelectorAll('.collapsible-header');
+        headers.forEach(function(header) {
+            header.addEventListener('click', function() {
+                var target = document.getElementById(header.getAttribute('data-target'));
+                if (target.style.display === 'none' || target.style.display === '') {
+                    target.style.display = 'block';
+                    header.querySelector('.collapsible-header-caret').src = 'Assets/Caret_up.png';
+                } else {
+                    target.style.display = 'none';
+                    header.querySelector('.collapsible-header-caret').src = 'Assets/Caret_down.png';
+                }
+            });
+        });
+    });
 }
 
 function hideAllCollapsibles()
