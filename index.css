@@ -1,19 +1,7 @@
-/*:root{
-    --color-primary: rgb(58, 205, 255);
-    --color-secondary: rgb(58, 172, 58);
-    --color-hover: rgb(3, 3, 3);
-    --font-primary: MuseoSans;
-
-    --font-size-collapsible-header: 1em;
-
-    --border-radius-secondary: 0.3em;
-    --transition-length: 0.2s;
-
-    --darktheme-colors-background: rgb(26, 26 ,32);
-
-    --lighttheme-colors-background-primary: white;
-    --lighttheme-colors-background-secondary: rgb(128, 128, 130);
-}*/
+:root{
+    --font-size-paragraph-header: 3em;
+    --font-size-paragraph-text: 1.5em;
+}
 @font-face {
     font-family: MuseoSans;
     src: url(Assets/MuseoSans_500.otf);
@@ -58,8 +46,8 @@ button{
 }
 
 .header-content{
-    margin: 0;
-    padding: 0;
+    margin: auto;
+    padding: 0 1.5em 0 0 ;
     
     width: max-content;
     height: 4em;
@@ -87,7 +75,7 @@ button{
 }
 
 .header-name{
-    font-size: 3em;
+    font-size: 6em;
     font-weight: 700;
     color: var(--colors-primary);
     font-family: var(--fonts-primary);
@@ -127,6 +115,7 @@ button{
     /*border-radius: 0 0 var(--border-radius-secondary) var(--border-radius-secondary);*/
 
     font-family: var(--font-primary);
+    font-size: var(--font-size-paragraph-text);
 
     max-height: 0;
 
@@ -172,18 +161,9 @@ button{
     margin-bottom: 3em;
     padding: 0 3em 0 3em;
 
-    width: min-content;   
+    width: 45em;   
 }
 
-h3{
-    padding: 0;
-    margin: 0;
-
-    font-family: var(--font-primary);
-    font-size: 1.4em;
-
-    color: var(--colors-font-positive);
-}
 
 h2{
     color: var(--colors-font-positive);
@@ -191,6 +171,9 @@ h2{
     text-align: center;
 
     font-weight: 300;
+
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 a{
@@ -198,7 +181,7 @@ a{
 }
 
 ul{
-    padding: 0.5em 0 0 1.5em;
+    padding: 0 0 0 1.5em;
     margin: 0;
 }
 
@@ -226,9 +209,9 @@ li{
 }
 
 .contacts-parent{
-    margin: 2em 0 0 0;
+    margin: auto;
 
-    width: 100%;
+    width: 90%;
 
     display: flex;
     flex-grow: 1;
@@ -239,17 +222,20 @@ li{
 
 .contacts-image{
     margin-top: 0.4em; 
-    height: 12em; 
+    width: 100%; 
     border-radius: var(--border-radius-secondary);
     overflow: hidden;
 }
 
 .contacts-right{
-    width: 30%;
+    width: 40%;
 }
 
 .contacts-left{
-    width: 70%;
+    width: 60%;
+    padding: 0 0 0 1em;
+
+    align-self: center;
 }
 
 .flexbox{
