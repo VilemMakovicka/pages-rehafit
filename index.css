@@ -153,6 +153,8 @@ button{
     
 }
 
+
+
 .collapsible-header:hover{
     background-color: color-mix(in srgb, var(--colors-primary) 90%, black 10%);
     cursor: pointer;
@@ -246,4 +248,13 @@ li{
 
 .flexbox{
     display: flex;
+}
+
+@media (max-width: 768px) {
+    .collapsible-header{ 
+        font-size: 3em;  
+    }
+}
+
+@media (max-width: 480px) {
 }
