@@ -232,14 +232,16 @@ li{
 }
 
 .contacts-right{
-    width: 40%;
+    width: 34%;
 }
 
 .contacts-left{
-    width: 60%;
+    width: 66%;
     padding: 0 0 0 1em;
 
     align-self: center;
+
+    font-size: 0.85em;
 }
 
 .flexbox{
