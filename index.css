@@ -138,7 +138,7 @@ button{
     background-color: var(--colors-primary);
     font-family: var(--font-primary);
     color: white;
-    font-size: var(--font-size-collapsible-header);
+    font-size: 1.6em;
 
     /*border-radius: 1em 1em 1em 1em;*/
 
