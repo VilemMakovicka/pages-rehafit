@@ -3,6 +3,10 @@ function onLoad(){
     assignCollapsibles();
 }
 
+function ChangeLocation(location){
+    window.location = location;
+}
+
 function assignCollapsibles(){
     var collapsiableButtons = document.getElementsByClassName("collapsible-header");
 
