@@ -1,6 +1,6 @@
 :root{
     --font-size-paragraph-header: 3em;
-    --font-size-paragraph-text: 1.5em;
+    --font-size-paragraph-text: 1.6em;
 }
 @font-face {
     font-family: MuseoSans;
@@ -16,6 +16,8 @@
     color: var(--colors-secondary);
     background-color: var(--colors-secondary);
 }
+
+
 
 body{
     background-color: var(--colors-background-primary);
@@ -37,11 +39,14 @@ body{
 
 html {
     scroll-behavior: smooth;
+    margin-bottom: 3em;
 }
 
 button{
     border-width: 0;
 }
+
+
 
 .header-name-parent{
     display: flex;
@@ -50,7 +55,7 @@ button{
 
 .header-content{
     margin: auto;
-    padding: 0 1.5em 0 0 ;
+    padding: 0 0 0 0 ;
     
     width: 100%;
     height: 4em;
@@ -70,11 +75,12 @@ button{
 }
 
 .header-image{
-    width: 3.5em;
-    height: 3.5em;
+    height: 6em;
     
     padding: 0;
     margin: 0 1em 0 1em;
+
+    cursor: pointer;
 }
 
 .header-name{
@@ -89,13 +95,90 @@ button{
     font-weight: 550;
 }
 
-.bordered{
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    border-color: black;
-    border-width: 0.1em;
-    border-style: solid;
+.name-parent{
+    color: var(--colors-secondary);
+    font-weight: 700;
+    font-size: var(--font-size-paragraph-text);
+    text-align: right;
+}
+
+.name-text{
+    color: var(--colors-secondary);
+}
+
+.ButtonMenu{
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 50em;
+
+    display: flex; 
+    overflow: hidden;
+
+    border-radius: var(--border-radius-secondary); 
+    
+    flex: 1 1 1;
+}
+
+.LinkButton{
+
+    width: 100%;
+
+    background: var(--colors-primary);
+
+    color: white;
+    text-align: center;
+    font-family: var(--font-primary);
+    font-size: 2em;
+}
+
+.LinkButton.active{
+    background: color-mix(in srgb, var(--colors-primary) 85%, black 15%);
+}
+
+.LinkButton:hover{
+    cursor: pointer;
+    background: color-mix(in srgb, var(--colors-primary) 90%, black 10%);
+}
+
+.about-content{
+    width: 50em;
+    margin: auto;
+
+    overflow: hidden;
+
+    font-size: var(--font-size-paragraph-text);
+}
+
+td{  
+    padding: 0;
+    margin: 0;
+    border-width: 0 0 2px 0;
+    border-style: dotted;
+    border-color: rgb(189, 189, 189);
+}
+
+.pricing-image{
+    
+    width: 15em;
+    margin: auto;
+    margin-top: 2em;
+    display: block;
+    border-radius: var(--border-radius-secondary);
+}
+
+.pricing-text{
+    font-size: var(--font-size-paragraph-text);
+    margin: auto;
+    display: block;
+    width: fit-content;
+}
+
+.pricing-content{
+    font-size: var(--font-size-paragraph-text);
+    margin: auto;
+
+    border-radius: var(--border-radius-secondary); 
 }
 
 /*COLLAPSIBLE*/
@@ -163,8 +246,7 @@ button{
 .parent-of-all{
     margin: auto;
     margin-top: 2.2em;
-    margin-bottom: 3em;
-    padding: 0 3em 0 3em;  
+    margin-bottom: 2.2em;
 
     width: min-content;
 }
@@ -214,45 +296,61 @@ li{
 }
 
 .contacts-parent{
-    margin: auto;
-    margin-top: 1em;
-
-    width: 90%;
+    margin-top: 2.2em;
+    width: 100%;
 
     display: flex;
     flex-grow: 1;
+    justify-content: center;
 
-    border-radius: var(--border-radius-secondary);
     overflow: hidden;
 }
 
-.contacts-image{
-    margin-top: 0.4em; 
-    width: 100%; 
-    border-radius: var(--border-radius-secondary);
-    overflow: hidden;
-}
-
-.contacts-right{
-    width: 34%;
-}
-
-.contacts-left{
-    width: 66%;
+.contacts-text{
     padding: 0 0 0 1em;
 
     align-self: center;
 
-    font-size: 0.85em;
+    font-size: var(--font-size-paragraph-text);
 }
+
+.contacts-image{
+    
+    border-radius: var(--border-radius-secondary);
+    overflow: hidden;
+
+    height: 100%;
+    margin: auto 0 auto 0;
+}
+
 
 .flexbox{
     display: flex;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
     .collapsible-header{ 
         font-size: 3em;  
+    }
+
+    .header-name{
+        font-size: 3em;
+    }
+
+    .name-parent{
+        font-size: 1.5em;
+    }
+    .ButtonMenu{
+        flex-direction: column;
+        width: 50%;
+    }
+    .contacts-parent{
+        flex-direction: column;
+        width: 100%;
+    }
+    .contacts-image{
+        width: 30%;
+        margin: auto;
     }
 }
 
