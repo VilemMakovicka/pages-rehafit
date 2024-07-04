@@ -344,6 +344,8 @@ li{
         flex-direction: column;
         width: 50%;
     }
+
+    /*--- Contacts ---*/
     .contacts-parent{
         flex-direction: column;
         width: 100%;
@@ -351,6 +353,33 @@ li{
     .contacts-image{
         width: 30%;
         margin: auto;
+    }
+    .contacts-text{
+        margin: 0;
+        padding: 0;
+
+        max-width: 100%;
+        text-align: center;
+    }
+
+    /*--- About ---*/
+
+    .about-content{
+        max-width: 100%;
+        font-size: 1.5em;
+    }
+
+    /*--- Pricing ---*/
+
+    .pricing-content{
+        max-width: 100%;
+        font-size: 1.5em;
+    }
+    .pricing-text{
+        max-width: 100%;
+        font-size: 1.5em;
+
+        text-align: center;
     }
 }
 
