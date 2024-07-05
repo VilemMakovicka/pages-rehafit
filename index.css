@@ -100,17 +100,20 @@ button{
     font-weight: 700;
     font-size: var(--font-size-paragraph-text);
     text-align: right;
+    font-size: 2em;
+    margin-top: 0.6em;
 }
 
 .name-text{
     color: var(--colors-secondary);
+    margin-top: 1em;
 }
 
 .ButtonMenu{
     margin: auto;
-    margin-top: 1em;
+    margin-top: 5em;
     margin-bottom: 1em;
-    width: 50em;
+    width: 80%;
 
     display: flex; 
     overflow: hidden;
@@ -124,26 +127,27 @@ button{
 
     width: 100%;
 
-    background: var(--colors-primary);
-
     color: white;
     text-align: center;
     font-family: var(--font-primary);
     font-size: 2em;
+
+    background: linear-gradient(270deg, var(--colors-primary), var(--colors-secondary));
 }
 
 .LinkButton.active{
-    background: color-mix(in srgb, var(--colors-primary) 85%, black 15%);
+    background: linear-gradient(270deg, var(--colors-primary), var(--colors-secondary));
 }
 
 .LinkButton:hover{
     cursor: pointer;
-    background: color-mix(in srgb, var(--colors-primary) 90%, black 10%);
+    background: linear-gradient(270deg, 
+    color-mix(in srgb, var(--colors-primary) 100%, white 0%), 
+    color-mix(in srgb, var(--colors-secondary) 50%, white 50%));
 }
 
 .about-content{
-    width: 50em;
-    max-width: 100%;
+    width: 80%;
     margin: auto;
 
     overflow: hidden;
@@ -152,10 +156,9 @@ button{
 }
 
 td{  
-    padding: 0;
+    padding: 1em 0 0 0;
     margin: 0;
     border-width: 0 0 2px 0;
-    border-style: dotted;
     border-color: rgb(189, 189, 189);
 }
 
@@ -172,12 +175,16 @@ td{
     font-size: var(--font-size-paragraph-text);
     margin: auto;
     display: block;
-    width: fit-content;
+    width: 80%;
+    max-width: 60em;
 }
 
 .pricing-content{
     font-size: var(--font-size-paragraph-text);
     margin: auto;
+
+    width: 80%;
+    max-width: 60em;
 
     border-radius: var(--border-radius-secondary); 
 }
@@ -269,7 +276,7 @@ a{
 }
 
 ul{
-    padding: 0 0 0 1.5em;
+    padding: 0 0 0 1.1em;
     margin: 0;
 }
 
@@ -297,8 +304,9 @@ li{
 }
 
 .contacts-parent{
+    margin: auto;
     margin-top: 2.2em;
-    width: 100%;
+    width: 80%;
 
     display: flex;
     flex-grow: 1;
@@ -307,10 +315,17 @@ li{
     overflow: hidden;
 }
 
+.pricing-text-right{
+    text-align: right;
+}
+
+.pricing-text-express{
+    padding: 2em 0 0 0;
+    font-weight: 700;
+}
+
 .contacts-text{
     padding: 0 0 0 1em;
-
-    align-self: center;
 
     font-size: var(--font-size-paragraph-text);
 }
@@ -321,7 +336,6 @@ li{
     overflow: hidden;
 
     height: 100%;
-    margin: auto 0 auto 0;
 }
 
 
@@ -381,6 +395,9 @@ li{
         font-size: 1.5em;
 
         text-align: center;
+    }
+    .name-parent{
+        margin-top: 0em;
     }
 }
 
