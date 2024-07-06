@@ -132,16 +132,16 @@ button{
     font-family: var(--font-primary);
     font-size: 2em;
 
-    background: linear-gradient(270deg, var(--colors-primary), var(--colors-secondary));
+    background: linear-gradient(90deg, var(--colors-primary), var(--colors-secondary));
 }
 
 .LinkButton.active{
-    background: linear-gradient(270deg, var(--colors-primary), var(--colors-secondary));
+    background: linear-gradient(90deg, var(--colors-primary), var(--colors-secondary));
 }
 
 .LinkButton:hover{
     cursor: pointer;
-    background: linear-gradient(270deg, 
+    background: linear-gradient(90deg, 
     color-mix(in srgb, var(--colors-primary) 100%, white 0%), 
     color-mix(in srgb, var(--colors-secondary) 50%, white 50%));
 }
@@ -305,7 +305,7 @@ li{
 
 .contacts-parent{
     margin: auto;
-    margin-top: 2.2em;
+    padding-top: 2.2em;
     width: 80%;
 
     display: flex;
