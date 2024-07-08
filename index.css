@@ -302,8 +302,8 @@ li{
 
     align-self: center;
 }
+
 .index-text{
-    margin: auto;
     font-weight: 700;
     font-size: 1.5em;
     color: var(--colors-primary);
