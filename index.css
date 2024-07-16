@@ -1,147 +1,445 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>rehafit</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="icon" href="Assets/Logo_1382x1382.png">
-    <script src="index.js"></script>
-    <link rel="stylesheet" id="switcher-id" href="Assets/Themes/themes-light.css">
-</head>
-<body onload="onLoad()">
-    <div class="parent-of-all">
-                <div style="width: 100%; align-content: center; display: flex;">
-                    <img src="Assets/Banner_1500x1500.png" style="width: 60%; margin: auto;">
-                </div>
-        <div class="header">
-            <div class="header-content">
-                <div class="header-image-parent">
-                    <img src="Assets/Logo_1382x1382.png" alt="logo" class="header-image" onclick="ChangeLocation('index.html')">
-                </div>
+:root{
+    --font-size-paragraph-header: 3em;
+    --font-size-paragraph-text: 1.6em;
+}
+@font-face {
+    font-family: MuseoSans;
+    src: url(Assets/MuseoSans_500.otf);
+}
 
-                <div class="header-name-parent">
-                    <a class="header-name">helprehafit</a>
-                </div>
-            </div>
-            <div class="name-parent">
-                <a class="name-text">Mgr. Kateřina Jordánková</a>
-            </div>
-        </div>
+.primary{
+    color: var(--colors-primary);
+    background-color: var(--colors-primary);
+}
 
-        <div style="height: 1.9em;"></div>
-    </div>
-    <div style="height: 1.9em;"></div>
-    <div style="width: 100%; text-align: center;"> 
-        <a class="index-text"> Pomoc při potížích pohybového aparátu, regenerace, rekondice, preventivní programy </a>
-    </div>
+.secondary{
+    color: var(--colors-secondary);
+    background-color: var(--colors-secondary);
+}
+
+
+
+body{
+    background-color: var(--colors-background-primary);
+
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+
+    width: 100%;
+    height: 100%;
+
+    font-family: var(--font-primary);
+
+    overflow-y: scroll;
     
-    <div class="ButtonMenu">
-        <button class="LinkButton" onclick="ChangeLocation('about.html')">
-            O mně
-        </button>
-        <button class="LinkButton" onclick="ChangeLocation('pricing.html')">
-            Ceník
-        </button>
-        <button class="LinkButton" onclick="ChangeLocation('contact.html')">
-            Kontakt
-        </button>
-    </div>
 
-    <!--
-    <div class="contacts-parent">
-        <img src="Assets/Image_377x524.jpg" class="contacts-image">
-        <div class="contacts-text">
-            <b>Mgr. Kateřina Jordánková</b><br>
-            <br>
-            Dům lékařských služeb ( 2.patro )<br>
-            B. Smetany 1123/24<br>
-            680 01  Boskovice<br>
-            <br>
-            <b>E-mail:</b> jordankova.katerina@seznam.cz<br>
-            <br>
-            <b>Stránky:</b> <a href="https://helprehafit.cz" style="color: var(--colors-primary);">helprehafit.cz</a><br>
-            <br>
-            <b>Telefon:</b> +420 603 293 778<br>
-        </div>
-    </div>
-    <div>
-        <table class="pricing-content">
-            <tr>
-                <td style="padding-right: 1em;">30 min</td>
-                <td>600 Kč</td>
-            </tr>
-            <tr>
-                <td style="padding-right: 1em;">60 min</td>
-                <td>900 Kč</td>
-            </tr>
-            <tr>
-                <td style="padding-right: 1em;">Manuální symetrizace a harmonizace celého těla 90 min      </td>
-                <td>1500 Kč</td>
-            </tr>
-            <tr>
-                <td style="padding-right: 1em;">Expres termín do 24h  30 min 1200 Kč / 60 min</td>
-                <td>1800 Kč</td>
-            </tr>
-        </table>
+    color: var(--colors-font-positive);
+}
+
+html {
+    scroll-behavior: smooth;
+    margin-bottom: 3em;
+}
+
+button{
+    border-width: 0;
+}
+
+
+
+.header-name-parent{
+    display: flex;
+    flex-direction:column;
+}
+
+.header-content{
+    margin: auto;
+    padding: 0 0 0 0 ;
     
-        <a class="pricing-text">
-            <br>
-            Služby jsou hrazeny klientem v hotovosti na místě. <br>
-            Po dohodě lze vystavit za poskytované služby fakturu.<br>
-            V současné době nepřijímám platební karty.
-        </a>
+    width: 100%;
+    height: 4em;
     
-        <img src="Assets/Spine_1784x2448.jpg" class="pricing-image">
-    </div>
+    align-items: center;
+    align-content: center;
+    
+    display: flex;
+}
 
-    <div class="about-content">
-        <h2>Vzdělání:</h2>
+.header{
+    margin: 0;
+    padding: 0;
+    
+    width: 100%;
+    height: 4em;
+}
 
-        <ul>
-            <li>2001 ukončení bakalářského studia na LF MU Brno Specializace ve zdravotnictví, obor Zdravotní vědy, směr Fyzioterapie a léčebná rehabilitace</li>
-            <li>2003 ukončení magisterského studia na LF MU Brno Specializace ve zdravotnictví, obor Zdravotní vědy, směr Fyzioterapie a léčebná rehabilitace</li>
-        </ul>
+.header-image{
+    height: 6em;
+    
+    padding: 0;
+    margin: 0 1em 0 1em;
 
-        <h2>Praxe:</h2>
+    cursor: pointer;
+}
 
-        <ul>
-            <li>IN Boskovice a.s.</li>
-            <li>Sdružení osob s poruchami hybnosti a komunikace Jihlava</li>
-            <li>R+RC s.r.o Brno</li>
-            <li>SZZ II Zahradníkova Brno</li>
-            <li>NZZ Mgr. Kateřina Jordánková MC Hippokrates Boskovice</li>
-            <li>Domov pro seniory Černá Hora</li>
-            <li>Nemocnice ve Svitavách</li>
-            <li>Nemocnice Letovice</li>
-            <li>OLÚ Jevíčko</li>
-            <li>Chironax Invest s.r.o. Brno</li>
-        </ul>
+.header-name{
+    font-size: 6em;
+    font-weight: 700;
+    color: var(--colors-primary);
+    font-family: var(--fonts-primary);
+}
 
-        <h2>Kurzy:</h2>
+.header-description{
+    margin-top: 0;
+    font-weight: 550;
+}
 
-        <ul>
-            <li>Certifikovaný kurz Diagnostika a terapie funkčních poruch hybného systému Brno</li>
-            <li>Certifikovaný kurz Fyzioterapie u dysfunkce pánevního dna a inkontinence Čelákovice</li>
-            <li>Certifikovaný kurz tejpování FMT Basic Rocktape Brno</li>
-            <li>Certifikovaný kurz tejpování FMT Basic Rocktape Brno</li>
-            <li>Certifikovaný kurz S-E-T Concept Record Hradec Králové</li>
-            <li>Certifikovaný kurz S-E-T Concept Record Hradec Králové</li>
-            <li>Certifikovaný kurz Flexi bar Basic,  Flexi bar Advanced Brno</li>
-            <li>Certifikovaný kurz Bosu Core, Bosu Strenght, Bosu Core Mapa I Praha</li>
-            <li>Kurz mobilizace žeber  metodou Ludmily Mojžíšové Brno</li>
-            <li>Kurz v technikách vědomé posturální korekce, cvičení na míčích a labilních plochách Brno</li>
-            <li>Kurz v neinvazivní laserové terapii Brno</li>
-            <li>Kurz stabilizace páteře teorie, praxe Praha</li>
-            <li>Kurz Diagnostika a terapie závratí Dobřichovice</li>
-            <li>Podiatrické minimum – vyšetření na podoskopu a systémem PodoCam 2.0 MEDsport Hradec Králové</li>
-            <li>Úrazy a onemocnění lokte Brno</li>
-            <li>Kurz základy první pomoci dle Guidelines 2010</li>
-            <li>Kurz akupunktury IPVZ Praha</li>
-            <li>Kurz praktické postupy v akupunktuře IPVZ Praha</li>
-            <li>Kurz Mohendžodáro – Osho Sugama Meditation Center</li>
-            <li>Školící akce MUDr. Lewitta  CKP Dobřichovice</li>
-        </ul>
-    </div>-->
-</body>
-</html>
+.name-parent{
+    color: var(--colors-secondary);
+    font-weight: 700;
+    font-size: var(--font-size-paragraph-text);
+    text-align: right;
+    font-size: 2em;
+    margin-top: 0.6em;
+}
+
+.name-text{
+    color: var(--colors-secondary);
+    margin-top: 1em;
+}
+
+.ButtonMenu{
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 80%;
+
+    display: flex; 
+    overflow: hidden;
+
+    border-radius: var(--border-radius-secondary); 
+    
+    flex: 1 1 1;
+}
+
+.LinkButton{
+
+    width: 100%;
+
+    color: white;
+    text-align: center;
+    font-family: var(--font-primary);
+    font-size: 2em;
+
+    background: linear-gradient(90deg, var(--colors-primary), var(--colors-secondary));
+}
+
+.LinkButton.active{
+    background: linear-gradient(90deg, var(--colors-primary), var(--colors-secondary));
+}
+
+.LinkButton:hover{
+    cursor: pointer;
+    background: linear-gradient(90deg, 
+    color-mix(in srgb, var(--colors-primary) 100%, white 0%), 
+    color-mix(in srgb, var(--colors-secondary) 50%, white 50%));
+}
+
+.about-content{
+    width: 80%;
+    margin: auto;
+
+    overflow: hidden;
+
+    font-size: var(--font-size-paragraph-text);
+}
+
+td{  
+    padding: 1em 0 0 0;
+    margin: 0;
+    border-width: 0 0 2px 0;
+    border-color: rgb(189, 189, 189);
+}
+
+.pricing-image{
+    
+    width: 15em;
+    margin: auto;
+    margin-top: 2em;
+    display: block;
+    border-radius: var(--border-radius-secondary);
+}
+
+.pricing-text{
+    font-size: var(--font-size-paragraph-text);
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 60em;
+}
+
+.pricing-content{
+    font-size: var(--font-size-paragraph-text);
+    margin: auto;
+
+    width: 80%;
+    max-width: 60em;
+
+    border-radius: var(--border-radius-secondary); 
+}
+
+/*COLLAPSIBLE*/
+
+.collapsible-parent{
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    height: min-content;
+    border-radius: var(--border-radius-secondary);
+    overflow: hidden;
+}
+
+.collapsible-content{
+    margin: 0;
+
+    background-color: white;
+
+    /*border-radius: 0 0 var(--border-radius-secondary) var(--border-radius-secondary);*/
+
+    font-family: var(--font-primary);
+    font-size: var(--font-size-paragraph-text);
+
+    max-height: 0;
+
+    zoom: 1;
+
+    display: block ; 
+
+    overflow: hidden ;
+
+    transition: max-height 0.2s ease-out;
+}
+
+.collapsible-header{
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    height: 2em;
+
+    background-color: var(--colors-primary);
+    font-family: var(--font-primary);
+    color: white;
+    font-size: 1.6em;
+
+    /*border-radius: 1em 1em 1em 1em;*/
+
+    /*transition: border-radius var(--transition-length) 0.25s ease-out;*/
+    transition: all var(--transition-length);
+
+    display: flex;
+    align-items: center;
+    
+}
+
+
+
+.collapsible-header:hover{
+    background-color: color-mix(in srgb, var(--colors-primary) 90%, black 10%);
+    cursor: pointer;
+}
+
+.parent-of-all{
+    margin: auto;
+    margin-top: 2.2em;
+    margin-bottom: 2.2em;
+
+    width: min-content;
+}
+
+
+h2{
+    color: var(--colors-font-positive);
+    align-self: center;
+    text-align: center;
+
+    font-weight: 300;
+
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+a{
+    color: var(--colors-font-positive);
+}
+
+ul{
+    padding: 0 0 0 1.1em;
+    margin: 0;
+}
+
+li{
+    padding: 0;
+    margin: 0;
+}
+
+.collapsible-header-content{
+    margin: auto;
+    display: flex;
+}
+
+.collapsible-header-text{
+    color: white;
+    align-self: center;
+}
+.collapsible-header-caret{
+    /*margin-top: 0.1em;*/
+
+    width: 2em; 
+    height: 2em; 
+
+    align-self: center;
+}
+.index-text{
+    margin: auto;
+    font-weight: 700;
+    font-size: 1.5em;
+    color: var(--colors-primary);
+}
+
+.contacts-parent{
+    margin: auto;
+    padding-top: 2.2em;
+    width: 80%;
+
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.pricing-text-right{
+    text-align: right;
+}
+
+.pricing-text-express{
+    padding: 2em 0 0 0;
+    font-weight: 700;
+}
+
+.contacts-text{
+    padding: 0 0 0 1em;
+
+    font-size: var(--font-size-paragraph-text);
+}
+
+.contacts-image{
+    
+    border-radius: var(--border-radius-secondary);
+    overflow: hidden;
+
+    height: 100%;
+}
+
+
+.flexbox{
+    display: flex;
+}
+
+@media (max-width: 850px) {
+    .collapsible-header{ 
+        font-size: 3em;  
+    }
+
+    .header-name{
+        font-size: 3em;
+    }
+
+    .name-parent{
+        font-size: 1.5em;
+    }
+    .ButtonMenu{
+        flex-direction: column;
+        width: 50%;
+    }
+
+    .BacklinkParent{
+        justify-content: center;
+    }
+
+    /*--- Contacts ---*/
+    .contacts-parent{
+        flex-direction: column;
+        width: 100%;
+    }
+    .contacts-image{
+        width: 30%;
+        margin: auto;
+    }
+    .contacts-text{
+        margin: 0;
+        padding: 0;
+
+        max-width: 100%;
+        text-align: center;
+    }
+
+    /*--- About ---*/
+
+    .about-content{
+        max-width: 100%;
+        font-size: 1.5em;
+    }
+
+    /*--- Pricing ---*/
+
+    .pricing-content{
+        max-width: 100%;
+        font-size: 1.5em;
+    }
+    .pricing-text{
+        max-width: 100%;
+        font-size: 1.5em;
+
+        text-align: center;
+    }
+    .name-parent{
+        margin-top: 0em;
+    }
+}
+
+@media (max-width: 480px) {
+}
+
+
+@media only screen and (max-device-width: 480px) {
+    .hide-mobile {
+      display: none;
+    }
+  }
+
+@media only screen and (min-device-width: 481px) {
+    .show-mobile {
+      display: none;
+    }
+  }
+
+  .BackLink{
+    color: var(--colors-secondary);
+    font-size: 2em;
+    cursor: pointer;
+  }
+
+.BacklinkParent{
+    margin: auto;
+    padding-bottom: 2.2em;
+    width: 80%;
+
+    display: flex;
+    flex-grow: 1;
+
+    overflow: hidden;
+}
