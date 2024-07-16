@@ -366,6 +366,10 @@ li{
         width: 50%;
     }
 
+    .BacklinkParent{
+        justify-content: center;
+    }
+
     /*--- Contacts ---*/
     .contacts-parent{
         flex-direction: column;
@@ -412,8 +416,6 @@ li{
 
 
 @media only screen and (max-device-width: 480px) {
-    .show-mobile {
-    }
     .hide-mobile {
       display: none;
     }
@@ -423,6 +425,21 @@ li{
     .show-mobile {
       display: none;
     }
-    .hide-mobile {
-    }
   }
+
+  .BackLink{
+    color: var(--colors-secondary);
+    font-size: 2em;
+    cursor: pointer;
+  }
+
+.BacklinkParent{
+    margin: auto;
+    padding-bottom: 2.2em;
+    width: 80%;
+
+    display: flex;
+    flex-grow: 1;
+
+    overflow: hidden;
+}
