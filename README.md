@@ -1,4 +1,4 @@
-Info pro kohokoliv, kdo bude na této stránce pracovat:
+# Info pro kohokoliv, kdo bude na této stránce pracovat:
 
 Proč jsem použil Github pro hostování stránky? 
 
