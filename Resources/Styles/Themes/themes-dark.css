@@ -1,0 +1,9 @@
+/*Tento soubor existuje pro případ, že by někdy měly být přidané barevné témata...*/
+
+:root{
+    --colors-primary: rgb(58, 205, 255);
+    --colors-secondary: rgb(138, 55, 147);
+    --colors-background-primary: rgb(41, 41, 52);
+    --colors-font-positive: white;
+
+}
