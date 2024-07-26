@@ -1,3 +1,5 @@
+Info pro kohokoliv, kdo bude na této stránce pracovat:
+
 Proč jsem použil Github pro hostování stránky? 
 
 Jelikož stránka měla obsahovat poměrně malé množství dat a žádné dynamické prvky, nebyl důvod pro hosting, či použití wordpressu. 
